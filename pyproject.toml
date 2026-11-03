@@ -1,0 +1,17 @@
+[build-system]
+requires = [
+    "hatchling >= 1.26",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "kopitools"
+version = "0.1.0"
+description = "Logs, painted strings, system arguments..."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.kuvy.run]
+main = "src/kopilogs/main.py"
+tests = "tests/tests.py"
