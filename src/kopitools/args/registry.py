@@ -13,13 +13,13 @@ class Args:
         for name, value in self._args.items():
             setattr(self, name, value)
 
-    def get(self, item: str) -> None | Any:
+    def get(self, item: str) -> Any:
         return self._args.get(item, None)
 
     def get_all(self) -> dict[str, Any]:
         return self._args.copy()
 
-    def __getitem__(self, item: Any) -> None | Any:
+    def __getitem__(self, item: Any) -> Any:
         return self._args.get(item, None)
 
 class Registry:
