@@ -47,7 +47,7 @@ class Registry:
     def option(
         self,
         name: str,
-        receives: None | float | str | int,
+        receives: Any,
         default: Any,
         attribute: str,
     ):
@@ -62,11 +62,10 @@ class Registry:
         # then, argument's presence means a bool
         if receives is None:
             self.options.update({attribute: not default})
-            del self.argv[key]
             return
 
         try:
-            value = receives(self.argv[key + 1]) # get the argument just after the key
+            value = receives(self.argv[key + 1]) # get the argument just after the key (value)
         except IndexError:
             raise ArgError(f"Missing value for: {name}")
         except ValueError:
