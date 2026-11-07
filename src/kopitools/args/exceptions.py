@@ -1,5 +1,5 @@
 class ArgError(Exception):
     pass
 
-class EntryPointNotFoundError(Exception):
+class RegistryError(Exception):
     pass

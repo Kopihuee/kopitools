@@ -5,6 +5,6 @@ from kopitools.paint import (
     paint, Paint
 )
 from kopitools.args import (
-    Registry, Option, Args,
-    ArgError, EntryPointNotFoundError,
+    Registry,  Args,
+    ArgError, RegistryError,
 )

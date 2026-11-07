@@ -1,5 +1,4 @@
 from kopitools.paint import paint
-
 from typing import Any
 
 class Log:
