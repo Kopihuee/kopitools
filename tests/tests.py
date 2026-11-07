@@ -26,12 +26,9 @@ talk.option(
     attribute="voice_model",
 )
 
-general_args = general.collect()
+general_args = general.force_collect()
 chat_args = chat.collect()
 talk_args = talk.collect()
-
-if general_args is not None:
-    print(general_args.get_all())
 
 if chat_args is not None:
     print(chat_args.get_all())

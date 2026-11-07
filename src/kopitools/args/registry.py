@@ -81,3 +81,6 @@ class Registry:
             return None
 
         return Args(self.options.copy())
+
+    def force_collect(self) -> Args:
+        return Args(self.options.copy())
